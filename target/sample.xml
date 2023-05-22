@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="1" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="3" time="14.725779">
+<testcase classname="Verify Adactin Login Page" name="Verify Login with valid credentials" time="6.704263">
+<failure message="org.junit.ComparisonFailure: verify login success msg expected:&lt;Hello [N]itish123!&gt; but was:&lt;Hello [n]itish123!&gt;&#13;&#10;&#9;at org.junit.Assert.assertEquals(Assert.java:115)&#13;&#10;&#9;at org.steps.LoginSteps.userVerifyLoginSucessMessage(LoginSteps.java:32)&#13;&#10;&#9;at ✽.User verify login sucess message &quot;Hello Nitish123!&quot;(src/test/resources/Features/TC1_AdactinLogin.feature:10)&#13;&#10;"><![CDATA[Given User is on adactin page...............................................passed
+When User enters "nitish123" and "Q8PTF9" and Click on Login Button.........passed
+Then User verify login sucess message "Hello Nitish123!"....................failed
+
+StackTrace:
+org.junit.ComparisonFailure: verify login success msg expected:<Hello [N]itish123!> but was:<Hello [n]itish123!>
+	at org.junit.Assert.assertEquals(Assert.java:115)
+	at org.steps.LoginSteps.userVerifyLoginSucessMessage(LoginSteps.java:32)
+	at ✽.User verify login sucess message "Hello Nitish123!"(src/test/resources/Features/TC1_AdactinLogin.feature:10)
+]]></failure>
+</testcase>
+<testcase classname="Verify Adactin Login Page" name="Verify Login with invalid credentials" time="3.92119">
+<system-out><![CDATA[Given User is on adactin page...............................................passed
+When User enters "nitish123" and "hello@123" and Click on Login Button......passed
+Then User verify login error message "Invalid Login details or Your Password might have expired. ".passed
+]]></system-out>
+</testcase>
+<testcase classname="Verify Adactin Login Page" name="Verify login page using Enter key with valid credentials" time="4.100326">
+<system-out><![CDATA[Given User is on adactin page...............................................passed
+When User enters userName and password and press enter key..................passed
+Then User verify login sucess message "Hello nitish123!"....................passed
+]]></system-out>
+</testcase>
+</testsuite>
